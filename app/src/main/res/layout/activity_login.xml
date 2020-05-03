@@ -106,8 +106,8 @@
 
     <TextView
         android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="355dp"
+        android:layout_height="37dp"
         android:layout_marginBottom="30dp"
         android:fontFamily="@font/fondamento"
         android:gravity="center"
@@ -118,6 +118,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.472" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

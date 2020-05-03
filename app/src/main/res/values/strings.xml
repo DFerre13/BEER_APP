@@ -27,6 +27,7 @@
     <string name="user_profile_info">(Display User Info)</string>
     <string name="create_new_header">Let\'s Get Brewing!</string>
     <string name="create_new_choice">Choose Your Brew</string>
+    <string name="action_register"> Register here</string>
     <!--Spinner Strings-->
     <string-array name="create_new_array">
         <item>Irish Red Ale </item>

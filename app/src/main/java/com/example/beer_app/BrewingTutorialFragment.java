@@ -22,6 +22,9 @@ public class BrewingTutorialFragment extends Fragment {
     TextView brewing_instructions;
     Button End;
     DatabaseReference ref;
+    int step_num = 0;
+    int instruction = 0;
+    String step;
 
     @Nullable
     @Override
@@ -32,6 +35,7 @@ public class BrewingTutorialFragment extends Fragment {
 
     }
     /*written by Devin*/
+    //
     @Override
     public void onStart() {
         super.onStart();
@@ -43,13 +47,70 @@ public class BrewingTutorialFragment extends Fragment {
         End.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 ref = FirebaseDatabase.getInstance().getReference().child("instructions").child("brewing");
                 ref.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String step0 =dataSnapshot.child("Step_0").getValue().toString();
-                        brewing_instructions.setText(step0);
+                        switch (step_num) {
+                            case 0:
+                                step = dataSnapshot.child("Step_0").getValue().toString();
+                                brewing_instructions.setText(step);
+                                break;
+                            case 1:
+                                step = dataSnapshot.child("Step_1").getValue().toString();
+                                brewing_instructions.setText(step);
+                                break;
+                            case 2:
+                                step = dataSnapshot.child("Step_2").getValue().toString();
+                                brewing_instructions.setText(step);
+                                break;
+                            case 3:
+                                step = dataSnapshot.child("Step_3").getValue().toString();
+                                brewing_instructions.setText(step);
+                                break;
+                            case 4:
+                                step = dataSnapshot.child("Step_4").getValue().toString();
+                                brewing_instructions.setText(step);
+                                break;
+                            case 5:
+                                step = dataSnapshot.child("Step_5").getValue().toString();
+                                brewing_instructions.setText(step);
+                                break;
+                            case 6:
+                                step = dataSnapshot.child("Step_6").getValue().toString();
+                                brewing_instructions.setText(step);
+                                break;
+                            case 7:
+                                step = dataSnapshot.child("Step_7").getValue().toString();
+                                brewing_instructions.setText(step);
+                                break;
+                            case 8:
+                                step = dataSnapshot.child("Step_8").getValue().toString();
+                                brewing_instructions.setText(step);
+                                break;
+                            case 9:
+                                step = dataSnapshot.child("Step_9").getValue().toString();
+                                brewing_instructions.setText(step);
+                                break;
+                            case 10:
+                                step = dataSnapshot.child("Step_10").getValue().toString();
+                                brewing_instructions.setText(step);
+                                break;
+                            case 11:
+                                step = dataSnapshot.child("Step_11").getValue().toString();
+                                brewing_instructions.setText(step);
+                                break;
+                            case 12:
+                                brewing_instructions.setText("Brewing End!");
+                                break;
+                            default:
+
+
+                        }
+                        step_num = step_num + 1;
                     }
+
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {

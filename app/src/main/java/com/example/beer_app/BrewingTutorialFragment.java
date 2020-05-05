@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,6 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 public class BrewingTutorialFragment extends Fragment {
     TextView brewing_instructions;
     Button End;
+    Button toFermentingButton;
     DatabaseReference ref;
     int step_num = 0;
     int instruction = 0;
@@ -42,8 +45,21 @@ public class BrewingTutorialFragment extends Fragment {
 
         brewing_instructions = (TextView) getView().findViewById(R.id.brew_tutorial);
 
+        toFermentingButton =(Button) getView().findViewById(R.id.toFermentingTutorial);//removable
         End =(Button) getView().findViewById(R.id.FinishButton);
+        toFermentingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new FermentingTutorialFragment();
+                FragmentManager fragmentManager =getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction =fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.BrewTutorial, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
 
+            }
+        });
+                //end of fermenting button
         End.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

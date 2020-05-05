@@ -1,8 +1,10 @@
 package com.example.beer_app;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
@@ -31,18 +33,20 @@ public class BrewingTutorialFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v =inflater.inflate(R.layout.brewing_tutorial_fragment, container, false);
 
         toFermentingButton =(Button)v.findViewById(R.id.toFermentingTutorial);//removable
-        toFermentingButton.setOnClickListener(new View.OnClickListener() {
+
+        toFermentingButton.setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v) {
+
                 Fragment fragment = new FermentingTutorialFragment();
                 FragmentManager fragmentManager =getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction =fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.BrewTutorial, fragment);
-                fragmentTransaction.addToBackStack(null);
+                //fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });
@@ -52,17 +56,15 @@ public class BrewingTutorialFragment extends Fragment {
     /*written by Devin*/
     //
     @Override
-    public void onStart() {
+    public void onStart()
+    {
         super.onStart();
 
         brewing_instructions = (TextView) getView().findViewById(R.id.brew_tutorial);
 
-
         End =(Button) getView().findViewById(R.id.FinishButton);
-
-
                 //end of fermenting button
-        End.setOnClickListener(new View.OnClickListener() {
+        End.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -131,7 +133,8 @@ public class BrewingTutorialFragment extends Fragment {
 
 
                     @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                    public void onCancelled(@NonNull DatabaseError databaseError)
+                    {
 
                     }
                 });

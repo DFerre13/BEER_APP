@@ -21,6 +21,7 @@ public class CreateNewFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.activity_create_new, container, false);
+
         startPreTutorial =(Button)v.findViewById(R.id.Start_Tutorial_Button);
 
         startPreTutorial.setOnClickListener(new OnClickListener() {
@@ -30,7 +31,7 @@ public class CreateNewFragment extends Fragment {
                 FragmentManager fragmentManager =getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction =fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.CreateNew, fragment);
-                fragmentTransaction.addToBackStack(null);
+                //fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });

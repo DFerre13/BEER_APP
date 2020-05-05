@@ -23,50 +23,36 @@
             android:textAlignment="center"
             android:textSize="30sp"
             android:textStyle="bold" />
-    </LinearLayout>
 
-    <Button
-        android:id="@+id/FinishButton"
-        android:layout_width="102dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="25dp"
-        android:background="#FFFFFF"
-        android:text="@string/Next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-        app:layout_constraintVertical_bias="0.717" />
-
-    <Button
-        android:id="@+id/toFermentingTutorial"
-        android:layout_width="228dp"
-        android:layout_height="60dp"
-        android:text="@string/toFermentingTutorial"
-        app:layout_constraintBottom_toTopOf="@+id/FinishButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
-
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="374dp"
-        android:layout_height="364dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.531">
-
-        <TextView
-            android:id="@+id/brew_tutorial"
+        <Button
+            android:id="@+id/toFermentingTutorial"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Test" />
-    </ScrollView>
+            android:layout_height="60dp"
+            android:text="@string/toFermentingTutorial" />
+
+        <Button
+            android:id="@+id/FinishButton"
+            android:layout_width="104dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="25dp"
+            android:background="#FFFFFF"
+            android:text="@string/Next" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="374dp"
+            android:layout_height="364dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp">
+
+            <TextView
+                android:id="@+id/brew_tutorial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

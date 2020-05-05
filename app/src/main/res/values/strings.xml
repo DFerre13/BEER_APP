@@ -64,6 +64,6 @@
     <string name="toBottlingTutorial">Go To Bottling Phase</string>
     <string name="Fermenting_Tutorial">Fermenting Tutorial</string>
     <string name="Bottling_tutorial">Bottling Tutorial</string>
-    <string name="Test">TEST</string>
-    <string name="Next">Next</string>
+    <!--<string name="Test"></string>-->
+    <string name="Next">Next Step</string>
 </resources>

@@ -8,6 +8,7 @@
     android:background="@drawable/barrel_background_4">
 
     <LinearLayout
+        android:id="@+id/LL1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -23,6 +24,30 @@
             android:textSize="30sp"
             android:textStyle="bold" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/FinishButton"
+        android:layout_width="102dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:background="#FFFFFF"
+        android:text="@string/Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="0.717" />
+
+    <Button
+        android:id="@+id/toFermentingTutorial"
+        android:layout_width="228dp"
+        android:layout_height="60dp"
+        android:text="@string/toFermentingTutorial"
+        app:layout_constraintBottom_toTopOf="@+id/FinishButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -43,29 +68,5 @@
             android:layout_height="wrap_content"
             android:text="@string/Test" />
     </ScrollView>
-
-    <Button
-        android:id="@+id/toFermentingTutorial"
-        android:layout_width="228dp"
-        android:layout_height="60dp"
-        android:text="@string/toFermentingTutorial"
-        app:layout_constraintBottom_toTopOf="@+id/FinishButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
-
-    <Button
-        android:id="@+id/FinishButton"
-        android:layout_width="102dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="25dp"
-        android:background="#FFFFFF"
-        android:text="@string/Next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-        app:layout_constraintVertical_bias="0.717" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

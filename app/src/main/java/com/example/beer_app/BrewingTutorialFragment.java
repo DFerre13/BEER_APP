@@ -34,6 +34,18 @@ public class BrewingTutorialFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v =inflater.inflate(R.layout.brewing_tutorial_fragment, container, false);
 
+        toFermentingButton =(Button)v.findViewById(R.id.toFermentingTutorial);//removable
+        toFermentingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new FermentingTutorialFragment();
+                FragmentManager fragmentManager =getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction =fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.BrewTutorial, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
         return v;
 
     }
@@ -45,20 +57,10 @@ public class BrewingTutorialFragment extends Fragment {
 
         brewing_instructions = (TextView) getView().findViewById(R.id.brew_tutorial);
 
-        toFermentingButton =(Button) getView().findViewById(R.id.toFermentingTutorial);//removable
-        End =(Button) getView().findViewById(R.id.FinishButton);
-        toFermentingButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Fragment fragment = new FermentingTutorialFragment();
-                FragmentManager fragmentManager =getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction =fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.BrewTutorial, fragment);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
 
-            }
-        });
+        End =(Button) getView().findViewById(R.id.FinishButton);
+
+
                 //end of fermenting button
         End.setOnClickListener(new View.OnClickListener() {
             @Override

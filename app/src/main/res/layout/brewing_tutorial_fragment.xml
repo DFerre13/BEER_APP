@@ -16,42 +16,77 @@
         <TextView
             android:id="@+id/TutorialTitle"
             android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="0dp"
             android:text="@string/TutorialTitle"
             android:textAlignment="center"
             android:textSize="30sp"
             android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/toFermentingTutorial"
+        <TextView
+            android:id="@+id/timerText"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="@string/toFermentingTutorial" />
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/FinishButton"
-            android:layout_width="104dp"
-            android:layout_height="55dp"
-            android:layout_marginLeft="150dp"
-            android:layout_marginTop="25dp"
-            android:background="#FFFFFF"
-            android:text="@string/Next" />
+        <TextView
+            android:id="@+id/timerText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/timerText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/timerText4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <ScrollView
             android:id="@+id/scrollView2"
             android:layout_width="374dp"
-            android:layout_height="364dp"
+            android:layout_height="263dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp">
 
             <TextView
                 android:id="@+id/brew_tutorial"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="bold" />
         </ScrollView>
+
+        <Button
+            android:id="@+id/FinishButton"
+            android:layout_width="128dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/barrel_color"
+            android:text="@string/Next" />
+
+        <Button
+            android:id="@+id/toFermentingTutorial"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:text="@string/toFermentingTutorial" />
 
     </LinearLayout>
 

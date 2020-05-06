@@ -104,11 +104,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new CreateNewFragment()).commit();
                 break;
+
+            case R.id.nav_brewing:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new BrewingTutorialFragment()).commit();
+                break;
+
+            case R.id.nav_fermenting:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new FermentingTutorialFragment()).commit();
+                break;
+
+            case R.id.nav_bottling:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new BottlingTutorialFragment()).commit();
+                break;
+
             case R.id.nav_logout:
                 FirebaseAuth.getInstance().signOut();
                 Intent intToHome = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intToHome);
                 break;
+
         }
 
         drawer.closeDrawer(GravityCompat.START);

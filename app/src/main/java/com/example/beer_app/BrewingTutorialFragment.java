@@ -179,7 +179,7 @@ public class BrewingTutorialFragment extends Fragment {
                                         int minutes = (int) (countDown2 / 60000);
                                         int seconds = (int) (countDown2 % 60000 / 1000);
                                         String timeLeft;
-                                        timeLeft= "Main Boil: "+minutes;
+                                        timeLeft= "Irish Moss: "+minutes;
                                         timeLeft += ":";
                                         if(seconds<10) timeLeft +="0";
                                         timeLeft+= ""+seconds;
@@ -211,7 +211,7 @@ public class BrewingTutorialFragment extends Fragment {
                                         int minutes = (int) (countDown3 / 60000);
                                         int seconds = (int) (countDown3 % 60000 / 1000);
                                         String timeLeft;
-                                        timeLeft= "Irish Moss: "+minutes;
+                                        timeLeft= "Secondary Hops: "+minutes;
                                         timeLeft += ":";
                                         if(seconds<10) timeLeft +="0";
                                         timeLeft+= ""+seconds;
@@ -241,7 +241,7 @@ public class BrewingTutorialFragment extends Fragment {
                                         int minutes = (int) (countDown4 / 60000);
                                         int seconds = (int) (countDown4 % 60000 / 1000);
                                         String timeLeft;
-                                        timeLeft= "Second Addition of Hops: "+minutes;
+                                        timeLeft= "Main Boil "+minutes;
                                         timeLeft += ":";
                                         if(seconds<10) timeLeft +="0";
                                         timeLeft+= ""+seconds;
